@@ -2,7 +2,7 @@ import streamlit as st
 import pickle
 
 st.image("https://growtraffic-bc85.kxcdn.com/blog/wp-content/uploads/2019/01/Amazon-5-Star-Review-Illustration.jpg")    
-model = pickle.load(open("C:\\Users\\ankus\\Downloads\\sample_data.pkl", "rb"))
+model = pickle.load(open("sample_data.pkl", "rb"))
 def predict(sentence):
     prediction = model.predict([sentence])
     if prediction[0]==1:
